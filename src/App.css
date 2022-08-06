@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+
+}
+
+.form {
+  display: inline-block;
+  width: 300px;
+  background-color: white;
+  height: 200px;
+  border-radius: 40px;
+  text-align: center;
+}
