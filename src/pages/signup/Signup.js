@@ -23,7 +23,7 @@ export default function Signup() {
             password: password
         }
 
-        fetch('http://localhost:3001/users', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/users`, {
             body: JSON.stringify(user),
             method: "POST",
             headers: {

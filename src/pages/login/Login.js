@@ -9,7 +9,7 @@ export default function Login(params) {
     const login = () => {
         // api call , we need to check on to the server 
 
-        fetch(`http://localhost:3001/authenticate?username=${username}&password=${password}`)
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/authenticate?username=${username}&password=${password}`)
             .then(res => res.json())
             .then(response => {
 
