@@ -17,7 +17,7 @@ export default function Home() {
             return;
         }
 
-        fetch(`http://localhost:3001/posts?token=${getToken()}`)
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/posts?token=${getToken()}`)
             .then(res => res.json())
             .then(response => {
 
@@ -37,7 +37,7 @@ export default function Home() {
             author: getToken()
         }
 
-        fetch(`http://localhost:3001/posts?token=${getToken()}`, {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/posts?token=${getToken()}`, {
             body: JSON.stringify(post),
             method: "POST",
             headers: {
